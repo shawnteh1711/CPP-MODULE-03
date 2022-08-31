@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:00:50 by steh              #+#    #+#             */
-/*   Updated: 2022/08/30 20:32:39 by steh             ###   ########.fr       */
+/*   Updated: 2022/08/31 22:03:50 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,11 @@ class ClapTrap
 		void	attack(const std::string & target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
+		void	print(ClapTrap const & rhs) const;
+		int		ckWeakStatus(void) const;
+		int		getDmg(void) const;
+
+
 };
 
 #endif

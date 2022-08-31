@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:00:50 by steh              #+#    #+#             */
-/*   Updated: 2022/08/30 20:32:39 by steh             ###   ########.fr       */
+/*   Updated: 2022/08/31 23:13:45 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ using std::endl;
 
 class ClapTrap
 {
-	private:
+	protected:
 		string	_name;
 		int		_hit_pts;
 		int		_energy_pts;
@@ -35,9 +35,15 @@ class ClapTrap
 		const ClapTrap & operator=(ClapTrap const & rhs);
 		~ClapTrap(void);
 
-		void	attack(const std::string & target);
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
+		void			attack(const std::string & target);
+		// void			takeDamage(unsigned int amount);
+		// void			beRepaired(unsigned int amount);
+		virtual void	takeDamage(unsigned int amount);
+		virtual void	beRepaired(unsigned int amount);
+		void			print(ClapTrap const & rhs) const;
+		int				ckWeakStatus(void) const;
+		int				getDmg(void) const;
+
 };
 
 #endif
