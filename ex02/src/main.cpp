@@ -5,37 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 19:33:42 by steh              #+#    #+#             */
-/*   Updated: 2022/09/01 22:24:58 by steh             ###   ########.fr       */
+/*   Created: 2022/09/01 20:15:53 by steh              #+#    #+#             */
+/*   Updated: 2022/09/01 22:12:24 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "FragTraps.hpp"
 #include "ScavTraps.hpp"
+#include "ClapTraps.hpp"
 
 int main(void)
 {
-	// ScavTraps	*st = new ScavTraps("ScavTraps");
-	// ClapTrap	*ct = new ClapTrap("ClapTrap");
-
-	// ct->attack("ScavTraps");
-	// st->takeDamage(ct->getDmg());
-	// st->beRepaired(10);
-	// st->attack("ClapTrap");
-	// ct->takeDamage(st->getDmg());
-	// ct->beRepaired(10);
-
+	FragTraps	ft("FragTrap");
 	ScavTraps	st("ScavTraps");
-	ClapTrap	ct("ClapTrap");
-	
-	cout << endl;
+	ClapTrap	ct("ClapTraps");
 
-	ct.attack("ScavTraps");
-	st.takeDamage(ct.getDmg());
-	st.beRepaired(10);
-	st.attack("ClapTrap");
-	ct.takeDamage(st.getDmg());
-	ct.beRepaired(10);
-	// ct.print(ct);
-	// st.print(st);
-	return (0);
+	ft.attack("ScavTraps");
+	st.attack("ClapTraps");
+	ct.attack("FragTrap");
+
+	ft.highFivesGuys();
+	// ft.takeDamage(st.getDmg());
+	ft.beRepaired(10);
+	ft.print(ft);
+	return 0;
 }

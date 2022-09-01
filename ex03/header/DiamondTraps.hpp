@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTraps.hpp                                      :+:      :+:    :+:   */
+/*   DiamondTraps.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 20:45:56 by steh              #+#    #+#             */
-/*   Updated: 2022/09/01 22:21:57 by steh             ###   ########.fr       */
+/*   Created: 2022/09/01 21:54:22 by steh              #+#    #+#             */
+/*   Updated: 2022/09/01 23:04:08 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAV_TRAPS_HPP
-# define SCAV_TRAPS_HPP
+#ifndef DIAMOND_TRAP_HPP
+# define DIAMOND_TRAP_HPP
 
 #include "ClapTraps.hpp"
-#include <iostream>
+#include "ScavTraps.hpp"
+#include "FragTraps.hpp"
 
+#include <iostream>
 using std::string;
-class ScavTraps : public ClapTrap
+
+class DiamondTraps : public FragTraps, public ScavTraps
 {
 	private:
-		bool	_guard;
+		string	_name;
 	public:
-		ScavTraps(void);
-		ScavTraps(string const name);
-		ScavTraps(ScavTraps const & src);
-		ScavTraps & operator=(ScavTraps const & rhs);
-		~ScavTraps(void);
+		DiamondTraps(void);
+		DiamondTraps(string const name);
+		DiamondTraps(DiamondTraps const & src);
+		DiamondTraps & operator=(DiamondTraps const & rhs);
+		~DiamondTraps(void);
 
-		void	guardGate(void);
-		// void	attack(const std::string & target);
-		// void	takeDamage(unsigned int amount);
-		// void	beRepaired(unsigned int amount);
-
+		void	whoAmI(void);
+		void	attack(const std::string & target);
 
 };
 

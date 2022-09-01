@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:00:50 by steh              #+#    #+#             */
-/*   Updated: 2022/08/31 22:03:50 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/01 17:31:16 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class ClapTrap
 		int		_hit_pts;
 		int		_energy_pts;
 		int		_atk_dmg;
+		string	_class_name;
 
 	public:
 		ClapTrap(void);

@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 20:47:42 by steh              #+#    #+#             */
-/*   Updated: 2022/09/01 22:22:30 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/01 22:26:54 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ ScavTraps::ScavTraps(ScavTraps const & src) : ClapTrap(src)
 
 ScavTraps	& ScavTraps::operator=(ScavTraps const & rhs)
 {
-	cout << "ScavTrap copy-assignment constructor called" << endl;
+	cout << "ScavTrap cop-assignment constructor called" << endl;
 	(void)rhs;
 	return (*this);
 }

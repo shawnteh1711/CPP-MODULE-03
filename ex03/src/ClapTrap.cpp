@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:01:55 by steh              #+#    #+#             */
-/*   Updated: 2022/09/01 22:24:28 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/01 22:40:54 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,9 +118,7 @@ int		ClapTrap::ckWeakStatus(void) const
 	{
 		i = -1;
 		cout 
-		<< this->_class_name 
-		<< " "
-		<< this->_name
+		<< this->_class_name << this->_name
 		<< " cannot move, in weak status"
 		<< endl;
 		ClapTrap::print(*this);
