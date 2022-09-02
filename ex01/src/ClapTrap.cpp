@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:01:55 by steh              #+#    #+#             */
-/*   Updated: 2022/09/01 22:24:28 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/02 20:09:50 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ ClapTrap::ClapTrap(void) : _name("null"), _hit_pts(10), _energy_pts(10), _atk_dm
 	cout << "ClapTrap blank constructor called" << endl;
 }
 
-ClapTrap::ClapTrap(string const name)
+ClapTrap::ClapTrap(string const & name)
 {
 	this->_class_name = "ClapTrap";
 	this->_name = name;

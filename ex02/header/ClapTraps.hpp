@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:00:50 by steh              #+#    #+#             */
-/*   Updated: 2022/09/01 22:09:09 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/02 20:11:51 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class ClapTrap
 
 	public:
 		ClapTrap(void);
-		ClapTrap(string const name);
+		ClapTrap(string const & name);
 		ClapTrap(ClapTrap const & src);
 		const ClapTrap & operator=(ClapTrap const & rhs);
 		~ClapTrap(void);

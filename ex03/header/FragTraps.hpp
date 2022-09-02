@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 17:41:58 by steh              #+#    #+#             */
-/*   Updated: 2022/09/01 22:18:17 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/02 19:59:52 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 #include "ClapTraps.hpp"
 
-class FragTraps : public ClapTrap
+class FragTraps : virtual public ClapTraps
 {
 	private:
 		/* data */
 	public:
 		FragTraps(void);
-		FragTraps(string const name);
+		FragTraps(string const & name);
 		FragTraps(FragTraps const & src);
 		FragTraps & operator=(FragTraps const & rhs);
 		~FragTraps(void);

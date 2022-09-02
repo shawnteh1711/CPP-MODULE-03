@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 20:47:42 by steh              #+#    #+#             */
-/*   Updated: 2022/09/01 22:26:54 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/02 20:25:30 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,17 @@ ScavTraps::ScavTraps(void) : _guard(false)
 	this->_hit_pts = 100;
 	this->_energy_pts = 50;
 	this->_atk_dmg = 20;
-	cout << "ScavTrap constructor called" << endl;
+	cout << "ScavTrap default constructor called" << endl;
 }
 
 ScavTraps::~ScavTraps()
 {
-	cout << "ScavTrap deconstructor called for " 
+	cout << "ScavTrap destructor called for " 
 	<< this->_name
 	<< endl;
 }
 
-ScavTraps::ScavTraps(string const name) : ClapTrap(name), _guard(false)
+ScavTraps::ScavTraps(string const & name) : ClapTraps(name), _guard(false)
 {
 	this->_class_name = "ScavTrap";
 	this->_hit_pts = 100;
@@ -37,7 +37,7 @@ ScavTraps::ScavTraps(string const name) : ClapTrap(name), _guard(false)
 	cout << "ScavTrap parameter constructor called" << endl;
 }
 
-ScavTraps::ScavTraps(ScavTraps const & src) : ClapTrap(src)
+ScavTraps::ScavTraps(ScavTraps const & src) : ClapTraps(src)
 {
 	cout << "ScavTrap copy constructor called" << endl;
 }

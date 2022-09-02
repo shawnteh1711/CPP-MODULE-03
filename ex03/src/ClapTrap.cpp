@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:01:55 by steh              #+#    #+#             */
-/*   Updated: 2022/09/01 22:40:54 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/02 20:25:18 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,44 +19,44 @@ using std::string;
 using std::cout;
 using std::endl;
 
-ClapTrap::ClapTrap(void) : _name("null"), _hit_pts(10), _energy_pts(10), _atk_dmg(0)
+ClapTraps::ClapTraps(void) : _name("null"), _hit_pts(10), _energy_pts(10), _atk_dmg(0)
 {
-	this->_class_name = "ClapTrap";
-	cout << "ClapTrap blank constructor called" << endl;
+	this->_class_name = "ClapTraps";
+	cout << "ClapTraps default constructor called" << endl;
 }
 
-ClapTrap::ClapTrap(string const name)
+ClapTraps::ClapTraps(string const & name)
 {
-	this->_class_name = "ClapTrap";
+	this->_class_name = "ClapTraps";
 	this->_name = name;
 	this->_hit_pts = 10;
 	this->_energy_pts = 10;
 	this->_atk_dmg = 0;
-	cout << "ClapTrap parameter constructor called" << endl;
+	cout << "ClapTraps parameter constructor called" << endl;
 }
 
-ClapTrap::~ClapTrap(void)
+ClapTraps::~ClapTraps(void)
 {
-	cout << "ClapTrap deconstructor called for "
+	cout << "ClapTraps destructor called for "
 	<< this->_name
 	<< endl;
 }
 
-ClapTrap::ClapTrap(ClapTrap const & src)
+ClapTraps::ClapTraps(ClapTraps const & src)
 {
 	*this = src;
-	cout << "ClapTrap copy deconstructor called" << endl;
+	cout << "ClapTraps copy deconstructor called" << endl;
 }
 
-const ClapTrap & ClapTrap::operator=(ClapTrap const & rhs)
+const ClapTraps & ClapTraps::operator=(ClapTraps const & rhs)
 {
-	cout << "ClapTrap assignment operator called" << endl;
+	cout << "ClapTraps assignment operator called" << endl;
 	return (rhs);
 }
 
-void	ClapTrap::attack(const std::string & target)
+void	ClapTraps::attack(const std::string & target)
 {
-	//ClapTrap <name> attacks <target>, causing <damage> points of damage!
+	//ClapTraps <name> attacks <target>, causing <damage> points of damage!
 	if (ckWeakStatus() == -1)
 		return ;
 	this->_energy_pts--;
@@ -69,12 +69,12 @@ void	ClapTrap::attack(const std::string & target)
 	<< endl;
 }
 
-int		ClapTrap::getDmg( void ) const
+int		ClapTraps::getDmg( void ) const
 {
 	return (this->_atk_dmg);
 }
 
-void	ClapTrap::takeDamage(unsigned int amount)
+void	ClapTraps::takeDamage(unsigned int amount)
 {
 	if (ckWeakStatus() == -1)
 		return ;
@@ -87,7 +87,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	<< endl;
 }
 
-void	ClapTrap::beRepaired(unsigned int amount)
+void	ClapTraps::beRepaired(unsigned int amount)
 {
 	if (ckWeakStatus() == -1)
 		return ;
@@ -101,7 +101,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	<< endl;
 }
 
-void	ClapTrap::print(ClapTrap const & rhs) const
+void	ClapTraps::print(ClapTraps const & rhs) const
 {
 	cout << "name       = " << rhs._name << endl;
 	cout << "hit points = " << rhs._hit_pts << endl;
@@ -109,7 +109,7 @@ void	ClapTrap::print(ClapTrap const & rhs) const
 	cout << "atk damage = " << rhs._atk_dmg << endl;
 }
 
-int		ClapTrap::ckWeakStatus(void) const
+int		ClapTraps::ckWeakStatus(void) const
 {
 	int	i;
 
@@ -121,7 +121,7 @@ int		ClapTrap::ckWeakStatus(void) const
 		<< this->_class_name << this->_name
 		<< " cannot move, in weak status"
 		<< endl;
-		ClapTrap::print(*this);
+		ClapTraps::print(*this);
 	}
 	return (i);
 }

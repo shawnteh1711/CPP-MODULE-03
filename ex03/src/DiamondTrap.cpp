@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 22:30:12 by steh              #+#    #+#             */
-/*   Updated: 2022/09/01 23:06:01 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/02 20:28:00 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,32 @@
 
 DiamondTraps::DiamondTraps(void)
 {
-	this->_class_name = "DiamondTrap";
+	this->_class_name = "DiamondTraps";
+	this->_name = "null";
 	this->_hit_pts = FragTraps::_hit_pts; // 100
 	this->_energy_pts = ScavTraps::_energy_pts; //50
 	this->_atk_dmg = FragTraps::_atk_dmg; // 30
-	cout << "DiamondTraps constructor called" << endl;
+	cout << "DiamondTraps default constructor called" << endl;
 }
 
 DiamondTraps::~DiamondTraps(void)
 {
-	cout << "DiamondTraps deconstructor called for " 
+	cout << "DiamondTraps destructor called for " 
 	<< this->_name
 	<< endl;
 }
 
-DiamondTraps::DiamondTraps(string const name) : _name(name)
+DiamondTraps::DiamondTraps(string const & name)
 {
-	ClapTrap::_name = name + "_clap_name";
-	this->_class_name = "DiamondTrap";
+	this->ClapTraps::_name = name + "_clap_name";
+	this->_name = name;
+	this->_class_name = "DiamondTraps";
 	this->_hit_pts = FragTraps::_hit_pts;
 	this->_energy_pts = ScavTraps::_energy_pts;
-	this->_atk_dmg = FragTraps::_atk_dmg;
+	// this->_atk_dmg = FragTraps::_atk_dmg;
+	// this->FragTraps::_hit_pts = 100;
+	// this->ScavTraps::_energy_pts = 50;
+	this->FragTraps::_atk_dmg = 30;
 	cout << "DiamondTraps parameter constructor called" << endl;
 
 }
@@ -53,7 +58,7 @@ DiamondTraps & DiamondTraps::operator=(DiamondTraps const & rhs)
 
 void	DiamondTraps::attack(const std::string & target)
 {
-	ScavTraps::attack(target);
+	this->ScavTraps::attack(target);
 }
 
 void	DiamondTraps::whoAmI(void)
@@ -64,6 +69,6 @@ void	DiamondTraps::whoAmI(void)
 	<< endl;
 	cout
 	<< "ClapTrap name is "
-	<< ClapTrap::_name
+	<< this->ClapTraps::_name
 	<< endl;
 }

@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 21:54:22 by steh              #+#    #+#             */
-/*   Updated: 2022/09/01 23:04:08 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/02 19:52:17 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class DiamondTraps : public FragTraps, public ScavTraps
 		string	_name;
 	public:
 		DiamondTraps(void);
-		DiamondTraps(string const name);
+		DiamondTraps(string const & name);
 		DiamondTraps(DiamondTraps const & src);
 		DiamondTraps & operator=(DiamondTraps const & rhs);
 		~DiamondTraps(void);

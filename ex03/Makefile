@@ -6,7 +6,7 @@
 #    By: steh <steh@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/18 17:07:14 by steh              #+#    #+#              #
-#    Updated: 2022/08/22 21:01:54 by steh             ###   ########.fr        #
+#    Updated: 2022/09/02 20:24:19 by steh             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ HEAD_DIR		=	header
 NAME			=	program
 # OBJS			=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 OBJS			=	$(patsubst $(SRCS_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(SRCS))
-CFLAGS			=	-Wall -Wextra -Werror -std=c++98 -pedantic -g -fsanitize=address
+CFLAGS			=	-Wall -Wextra -Werror -std=c++98 -pedantic -g -fsanitize=address -Wshadow -Wno-shadow
 CC				=	c++	
 
 all				: 	$(NAME)

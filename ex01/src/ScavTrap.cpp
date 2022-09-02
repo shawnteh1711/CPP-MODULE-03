@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 20:47:42 by steh              #+#    #+#             */
-/*   Updated: 2022/09/01 22:22:30 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/02 20:09:57 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ ScavTraps::~ScavTraps()
 	<< endl;
 }
 
-ScavTraps::ScavTraps(string const name) : ClapTrap(name), _guard(false)
+ScavTraps::ScavTraps(string const & name) : ClapTrap(name), _guard(false)
 {
 	this->_class_name = "ScavTrap";
 	this->_hit_pts = 100;

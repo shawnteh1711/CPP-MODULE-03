@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 20:45:56 by steh              #+#    #+#             */
-/*   Updated: 2022/09/01 22:21:57 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/02 20:10:10 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class ScavTraps : public ClapTrap
 		bool	_guard;
 	public:
 		ScavTraps(void);
-		ScavTraps(string const name);
+		ScavTraps(string const & name);
 		ScavTraps(ScavTraps const & src);
 		ScavTraps & operator=(ScavTraps const & rhs);
 		~ScavTraps(void);

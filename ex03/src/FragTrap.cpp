@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 17:43:29 by steh              #+#    #+#             */
-/*   Updated: 2022/09/01 22:26:47 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/02 20:24:51 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,17 @@ FragTraps::FragTraps(void)
 	this->_hit_pts = 100;
 	this->_energy_pts = 100;
 	this->_atk_dmg = 30;
-	cout << "FragTraps constructor called" << endl;
+	cout << "FragTraps default constructor called" << endl;
 }
 
 FragTraps::~FragTraps()
 {
-	cout << "FragTraps destuctor called" << endl;
+	cout << "FragTraps destructor called for "
+	<< this->_name
+	<< endl;
 }
 
-FragTraps::FragTraps(string const name) : ClapTrap(name)
+FragTraps::FragTraps(string const & name) : ClapTraps(name)
 {
 	this->_class_name = "FragTrap";
 	this->_hit_pts = 100;
@@ -36,7 +38,7 @@ FragTraps::FragTraps(string const name) : ClapTrap(name)
 	cout << "FragTraps parameter constructor called" << endl;
 }
 
-FragTraps::FragTraps(FragTraps const & src) : ClapTrap(src)
+FragTraps::FragTraps(FragTraps const & src) : ClapTraps(src)
 {
 	cout << "FragTraps copy constructor called" << endl;
 }

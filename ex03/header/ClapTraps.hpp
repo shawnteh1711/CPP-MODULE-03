@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:00:50 by steh              #+#    #+#             */
-/*   Updated: 2022/09/01 23:06:49 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/02 19:55:34 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ using std::string;
 using std::cout;
 using std::endl;
 
-class ClapTrap
+class ClapTraps
 {
 	protected:
 		string	_name;
@@ -30,18 +30,18 @@ class ClapTrap
 		string	_class_name;
 
 	public:
-		ClapTrap(void);
-		ClapTrap(string const name);
-		ClapTrap(ClapTrap const & src);
-		const ClapTrap & operator=(ClapTrap const & rhs);
-		~ClapTrap(void);
+		ClapTraps(void);
+		ClapTraps(string const & name);
+		ClapTraps(ClapTraps const & src);
+		const ClapTraps & operator=(ClapTraps const & rhs);
+		~ClapTraps(void);
 
 		void			attack(const std::string & target);
 		void			takeDamage(unsigned int amount);
 		void			beRepaired(unsigned int amount);
 		// virtual void	takeDamage(unsigned int amount);
 		// virtual void	beRepaired(unsigned int amount);
-		void			print(ClapTrap const & rhs) const;
+		void			print(ClapTraps const & rhs) const;
 		int				ckWeakStatus(void) const;
 		int				getDmg(void) const;
 

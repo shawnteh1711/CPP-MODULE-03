@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 20:45:56 by steh              #+#    #+#             */
-/*   Updated: 2022/09/01 22:18:20 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/02 19:59:38 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 #include <iostream>
 
 using std::string;
-class ScavTraps : public ClapTrap
+class ScavTraps : virtual public ClapTraps
 {
-	private:
+	protected:
 		bool	_guard;
 	public:
 		ScavTraps(void);
-		ScavTraps(string const name);
+		ScavTraps(string const & name);
 		ScavTraps(ScavTraps const & src);
 		ScavTraps & operator=(ScavTraps const & rhs);
 		~ScavTraps(void);
