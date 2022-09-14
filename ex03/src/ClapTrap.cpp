@@ -6,11 +6,11 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:01:55 by steh              #+#    #+#             */
-/*   Updated: 2022/09/02 20:25:18 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/14 21:19:01 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTraps.hpp"
+#include "../header/ClapTraps.hpp"
 
 #include <string>
 #include <iostream>

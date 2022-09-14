@@ -6,11 +6,11 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 22:30:12 by steh              #+#    #+#             */
-/*   Updated: 2022/09/02 20:28:00 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/14 21:12:51 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTraps.hpp"
+#include "../header/DiamondTraps.hpp"
 
 DiamondTraps::DiamondTraps(void)
 {

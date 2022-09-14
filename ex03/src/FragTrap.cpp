@@ -6,12 +6,12 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 17:43:29 by steh              #+#    #+#             */
-/*   Updated: 2022/09/02 20:24:51 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/14 21:19:36 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "FragTraps.hpp"
+#include "../header/FragTraps.hpp"
 
 FragTraps::FragTraps(void)
 {

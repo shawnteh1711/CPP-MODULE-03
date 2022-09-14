@@ -6,11 +6,11 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:01:55 by steh              #+#    #+#             */
-/*   Updated: 2022/09/02 20:09:50 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/14 20:56:05 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTraps.hpp"
+#include "../header/ClapTraps.hpp"
 
 #include <string>
 #include <iostream>
@@ -62,7 +62,8 @@ void	ClapTrap::attack(const std::string & target)
 	this->_energy_pts--;
 	cout
 	<< this->_class_name 
-	<< " " << this->_name
+	<< " "
+	<< this->_name
 	<< " attacks " << target
 	<< " causing " << this->_atk_dmg
 	<< " points of damage "
