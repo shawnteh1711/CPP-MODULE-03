@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 20:47:42 by steh              #+#    #+#             */
-/*   Updated: 2022/09/14 21:19:13 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/15 21:42:28 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@ ScavTraps::ScavTraps(void) : _guard(false)
 {
 	this->_class_name = "ScavTrap";
 	this->_hit_pts = 100;
-	this->_energy_pts = 50;
 	this->_atk_dmg = 20;
+	ClapTraps::_energy_pts = 50;
+	this->_energy_pts = 50;
 	cout << "ScavTrap default constructor called" << endl;
 }
 
@@ -32,8 +33,9 @@ ScavTraps::ScavTraps(string const & name) : ClapTraps(name), _guard(false)
 {
 	this->_class_name = "ScavTrap";
 	this->_hit_pts = 100;
-	this->_energy_pts = 50;
 	this->_atk_dmg = 20;
+	ClapTraps::_energy_pts = 50;
+	this->_energy_pts = 50;
 	cout << "ScavTrap parameter constructor called" << endl;
 }
 
@@ -55,19 +57,19 @@ void	ScavTraps::guardGate(void)
 	cout << "Guard Mode on" << endl;
 }
 
-// void	ScavTraps::attack(const std::string & target)
-// {
-// 	//ScavTraps <name> attacks <target>, causing <damage> points of damage!
-// 	if (ckWeakStatus() == -1)
-// 		return ;
-// 	this->_energy_pts--;
-// 	cout 
-// 	<< " ScavTraps " << this->_name
-// 	<< " attacks " << target
-// 	<< " causing " << this->_atk_dmg
-// 	<< " points of damage "
-// 	<< endl;
-// }
+void	ScavTraps::attack(const std::string & target)
+{
+	//ScavTraps <name> attacks <target>, causing <damage> points of damage!
+	if (ckWeakStatus() == -1)
+		return ;
+	this->_energy_pts--;
+	cout 
+	<< "ScavTraps " << this->_name
+	<< " attacks " << target
+	<< " causing " << this->_atk_dmg
+	<< " points of damage "
+	<< endl;
+}
 
 
 // void	ScavTraps::takeDamage(unsigned int amount)

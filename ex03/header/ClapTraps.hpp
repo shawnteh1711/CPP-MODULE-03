@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:00:50 by steh              #+#    #+#             */
-/*   Updated: 2022/09/02 22:00:44 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/15 20:34:03 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ class ClapTraps
 		void			print(ClapTraps const & rhs) const;
 		int				ckWeakStatus(void) const;
 		int				getDmg(void) const;
+
 
 };
 

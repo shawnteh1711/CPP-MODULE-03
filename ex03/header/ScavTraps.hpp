@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 20:45:56 by steh              #+#    #+#             */
-/*   Updated: 2022/09/02 22:00:48 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/15 21:43:40 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class ScavTraps : virtual public ClapTraps
 {
 	protected:
 		bool	_guard;
+		int		_energy_pts;
 	public:
 		ScavTraps(void);
 		ScavTraps(string const & name);
@@ -29,6 +30,8 @@ class ScavTraps : virtual public ClapTraps
 		~ScavTraps(void);
 
 		void	guardGate(void);
+		void	attack(const std::string & target);
+
 		// void	attack(const std::string & target);
 		// void	takeDamage(unsigned int amount);
 		// void	beRepaired(unsigned int amount);

@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 21:54:22 by steh              #+#    #+#             */
-/*   Updated: 2022/09/02 19:52:17 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/15 21:08:25 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 #include <iostream>
 using std::string;
 
-class DiamondTraps : public FragTraps, public ScavTraps
+class DiamondTraps : public ScavTraps, public FragTraps
 {
 	private:
 		string	_name;
@@ -33,7 +33,7 @@ class DiamondTraps : public FragTraps, public ScavTraps
 
 		void	whoAmI(void);
 		void	attack(const std::string & target);
-
+		void	printEverything(void) const;
 };
 
 #endif

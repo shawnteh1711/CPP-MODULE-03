@@ -6,7 +6,7 @@
 /*   By: steh <steh@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:01:55 by steh              #+#    #+#             */
-/*   Updated: 2022/09/14 21:19:01 by steh             ###   ########.fr       */
+/*   Updated: 2022/09/15 20:46:13 by steh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,7 @@ void	ClapTraps::beRepaired(unsigned int amount)
 
 void	ClapTraps::print(ClapTraps const & rhs) const
 {
+	cout << "name       = " << rhs._class_name << endl;
 	cout << "name       = " << rhs._name << endl;
 	cout << "hit points = " << rhs._hit_pts << endl;
 	cout << "energy     = " << rhs._energy_pts << endl;
@@ -121,7 +122,7 @@ int		ClapTraps::ckWeakStatus(void) const
 		<< this->_class_name << this->_name
 		<< " cannot move, in weak status"
 		<< endl;
-		ClapTraps::print(*this);
+		// ClapTraps::print(*this);
 	}
 	return (i);
 }
